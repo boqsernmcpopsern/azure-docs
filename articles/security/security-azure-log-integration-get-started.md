@@ -44,10 +44,6 @@ The physical or virtual machine running the Azure Log Integration service requir
 At a minimum, the installation of AzLog requires the following items:
 
 * An **Azure subscription**. If you do not have one, you can sign up for a [free account](https://azure.microsoft.com/free/).
-* A **storage account** that can be used for Windows Azure diagnostic logging (you can use a pre-configured storage account, or create a new one – will we demonstrate how to configure the storage account later in this article)
-
-  >[!NOTE]
-  Depending on your scenario a storage account may not be required. For the Azure diagnostics scenario covered in this article one is needed.
 
 * **Two systems**: a machine that will run the Azure Log Integration service, and a machine that will be monitored and have its logging information sent to the AzLog service machine.
    * A machine you want to monitor – this is a VM running as an [Azure Virtual Machine](../virtual-machines/virtual-machines-windows-overview.md)
@@ -59,12 +55,6 @@ At a minimum, the installation of AzLog requires the following items:
 * A **storage account** that can be used for Windows Azure diagnostic logging. You can use a pre-configured storage account, or create a new one. You configure the storage account later in this article.
   >[!NOTE]
   Depending on your scenario a storage account may not be required. For the Azure diagnostics scenario covered in this article one is needed.
-* **Two systems**: a machine that runs the Azure Log Integration service, and a machine that is monitored and has its logging information sent to the Azlog service machine.
-   * A machine you want to monitor – this is a VM running as an [Azure Virtual Machine](../virtual-machines/virtual-machines-windows-overview.md)
-   * A machine that runs the Azure log integration service; this machine collects all the log information that is later imported into your SIEM.
-    * This system can be on-premises or in Microsoft Azure.  
-    * It needs to be running an x64 version of Windows server 2008 R2 SP1 or higher and have .NET 4.5.1 installed. You can determine the .NET version installed by following the article titled [How to: Determine Which .NET Framework Versions Are Installed](https://msdn.microsoft.com/library/hh925568)  
-    It must have connectivity to the Azure storage account used for Azure diagnostic logging. How you confirm this connectivity is described later in this article.
 
 For a quick demonstration of the process of a creating a virtual machine using the Azure portal, take a look at the video below.
 
